@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>RealScreen</title>
+</head>
+<body>
+    <div id="compare" class="compare">
+        <div id="display1" class="display">
+            <div id="screenRect1" class="rectangle" data-width-inches="{{ screen1[0] }}" data-height-inches="{{ screen1[1] }}">
+                <div class="center">
+                    <p id="areaLabel1">Area: {{ '%.2f' % (screen1[0] * screen1[1]) }} in²</p>
+                </div>
+            </div>
+        </div>
+        <div id="display2" class="display">
+            <div id="screenRect2" class="rectangle" data-width-inches="{{ screen2[0] }}" data-height-inches="{{ screen2[1] }}">
+                <div class="center">
+                    <p id="areaLabel2">Area: {{ '%.2f' % (screen2[0] * screen2[1]) }} in²</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <form id="calcForm" action="/" method="POST">
+            <div class="inputs-row">
+                <div class="form-group">
+                    <label for="diagonal1">Screen 1 Diagonal (inches):</label>
+                    <input type="number" id="diagonal1" name="diagonal1" step="0.1" min="0" required value="{{ diagonal1 }}">
+                </div>
+                <div class="form-group">
+                    <label for="aspect_ratio1">Screen 1 Aspect Ratio (W:H):</label>
+                    <input type="text" id="aspect_ratio1" name="aspect_ratio1" required value="{{ aspect_ratio1 }}">
+                </div>
+            </div>
+            <div class="inputs-row">
+                <div class="form-group">
+                    <label for="diagonal2">Screen 2 Diagonal (inches):</label>
+                    <input type="number" id="diagonal2" name="diagonal2" step="0.1" min="0" required value="{{ diagonal2 }}">
+                </div>
+                <div class="form-group">
+                    <label for="aspect_ratio2">Screen 2 Aspect Ratio (W:H):</label>
+                    <input type="text" id="aspect_ratio2" name="aspect_ratio2" required value="{{ aspect_ratio2 }}">
+                </div>
+            </div>
+            <button type="submit" class="btn">Calculate</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
