@@ -7,13 +7,14 @@ The visualization scales to fit the browser window while preserving relative siz
 ### Requirements
 - Python 3.9+
 - Flask
-- realscreenPy (must be importable in your environment)
+- realscreenPy
 
 ### Setup
 
-# Install Flask and realScreenPy
+# Install Flask and realscreenPy
+```bash
 pip install Flask realScreenPy
-```
+``
 
 ### Run
 ```bash
