@@ -11,15 +11,15 @@ The visualization scales to fit the browser window while preserving relative siz
 
 ### Setup
 
-# Install Flask and realscreenPy
+Install Flask and realscreenPy:
 ```bash
-pip install Flask realScreenPy
-``
+pip install Flask realscreenPy
+```
 
 ### Run
 ```bash
 python app.py
-``
+```
 
 ### Use
 - Enter aspect ratios such as `16:9`, `4:3`, or `21:9` for Screen 1 and Screen 2.
