@@ -28,25 +28,15 @@
         <form id="calcForm" action="/" method="POST">
             <div class="inputs-row">
                 <div class="form-group">
-                    <label for="diagonal1">Screen 1 Diagonal (inches):</label>
-                    <input type="number" id="diagonal1" name="diagonal1" step="0.1" min="0" required value="{{ diagonal1 }}">
-                </div>
-                <div class="form-group">
-                    <label for="aspect_ratio1">Screen 1 Aspect Ratio (W:H):</label>
+                    <label for="aspect_ratio1">Screen 1 Aspect Ratio (W:H) — Diagonal {{ fixed_diagonal }}"</label>
                     <input type="text" id="aspect_ratio1" name="aspect_ratio1" required value="{{ aspect_ratio1 }}">
                 </div>
-            </div>
-            <div class="inputs-row">
                 <div class="form-group">
-                    <label for="diagonal2">Screen 2 Diagonal (inches):</label>
-                    <input type="number" id="diagonal2" name="diagonal2" step="0.1" min="0" required value="{{ diagonal2 }}">
-                </div>
-                <div class="form-group">
-                    <label for="aspect_ratio2">Screen 2 Aspect Ratio (W:H):</label>
+                    <label for="aspect_ratio2">Screen 2 Aspect Ratio (W:H) — Diagonal {{ fixed_diagonal }}"</label>
                     <input type="text" id="aspect_ratio2" name="aspect_ratio2" required value="{{ aspect_ratio2 }}">
                 </div>
             </div>
-            <button type="submit" class="btn">Calculate</button>
+            <button type="submit" class="btn">Update</button>
         </form>
     </div>
 
